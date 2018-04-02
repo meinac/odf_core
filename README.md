@@ -1,5 +1,7 @@
 # OdfCore
 
+[![Build Status](https://travis-ci.org/meinac/odf_core.svg?branch=master)](https://travis-ci.org/meinac/odf_core)
+
 Full set of "Open Document Format" elements translated into Ruby classes.
 Ok, seems like cool but what does it mean? It means if you are developing an ODF gem you can take this implementation as a foundation of your gem. If you are looking for an easy to use ODF implementation without knowing all the implementation details of ODF, you are not supposed to be here, instead you can have a look at the [ODF gem](https://github.com/meinac/odf).
 
