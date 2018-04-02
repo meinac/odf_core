@@ -1,0 +1,83 @@
+module OdfCore
+  module Element
+    module Style
+      class ChartProperties < AbstractElement
+        XML_ELEMENT_NAME = 'style:chart-properties'
+
+        CHILDREN = ["chart:label-separator", "chart:symbol-image"].freeze
+
+        ATTRIBUTES = [
+          "chart:angle-offset",
+          "chart:auto-position",
+          "chart:auto-size",
+          "chart:axis-label-position",
+          "chart:axis-position",
+          "chart:connect-bars",
+          "chart:data-label-number",
+          "chart:data-label-symbol",
+          "chart:data-label-text",
+          "chart:deep",
+          "chart:display-label",
+          "chart:error-category",
+          "chart:error-lower-indicator",
+          "chart:error-lower-limit",
+          "chart:error-lower-range",
+          "chart:error-margin",
+          "chart:error-percentage",
+          "chart:error-upper-indicator",
+          "chart:error-upper-limit",
+          "chart:error-upper-range",
+          "chart:gap-width",
+          "chart:group-bars-per-axis",
+          "chart:hole-size",
+          "chart:include-hidden-cells",
+          "chart:interpolation",
+          "chart:interval-major",
+          "chart:interval-minor-divisor",
+          "chart:japanese-candle-stick",
+          "chart:label-arrangement",
+          "chart:label-position",
+          "chart:label-position-negative",
+          "chart:lines",
+          "chart:link-data-style-to-source",
+          "chart:logarithmic",
+          "chart:maximum",
+          "chart:mean-value",
+          "chart:minimum",
+          "chart:origin",
+          "chart:overlap",
+          "chart:percentage",
+          "chart:pie-offset",
+          "chart:regression-type",
+          "chart:reverse-direction",
+          "chart:right-angled-axes",
+          "chart:scale-text",
+          "chart:series-source",
+          "chart:solid-type",
+          "chart:sort-by-x-values",
+          "chart:spline-order",
+          "chart:spline-resolution",
+          "chart:stacked",
+          "chart:symbol-height",
+          "chart:symbol-name",
+          "chart:symbol-type",
+          "chart:symbol-width",
+          "chart:text-overlap",
+          "chart:three-dimensional",
+          "chart:tick-mark-position",
+          "chart:tick-marks-major-inner",
+          "chart:tick-marks-major-outer",
+          "chart:tick-marks-minor-inner",
+          "chart:tick-marks-minor-outer",
+          "chart:treat-empty-cells",
+          "chart:vertical",
+          "chart:visible",
+          "style:direction",
+          "style:rotation-angle",
+          "text:line-break",
+        ].freeze
+
+      end
+    end
+  end
+end
