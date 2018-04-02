@@ -1,7 +1,7 @@
 # OdfCore
 
 Full set of "Open Document Format" elements translated into Ruby classes.
-Ok but what does it mean? It means if you are developing an ODF gem you can take this implementation as core of your gem. If you are looking for an easy to use ODF implementation without knowing all the implementation details of ODF, you are not supposed to be here, instead you can have a look at the [ODF gem](https://github.com/meinac/odf).
+Ok, seems like cool but what does it mean? It means if you are developing an ODF gem you can take this implementation as a foundation of your gem. If you are looking for an easy to use ODF implementation without knowing all the implementation details of ODF, you are not supposed to be here, instead you can have a look at the [ODF gem](https://github.com/meinac/odf).
 
 ## Installation
 
@@ -21,16 +21,25 @@ Or install it yourself as:
 
 ## Usage
 
-Example usage of classes;
+This gem provides Ruby classes for all ODF elements. If the element you want to use is `draw::text-box` then the class you are looking for is `OdfCore::Element::Draw::TextBox`. The pattern is applicable for all the elements(`OdfCore::Element::$NAMESPACE::$ELEMENT_NAME_IN_RUBY_CONVENTION`).
 
-    text_box = OdfCore::Draw::TextBox.new
-    headline = OdfCore::Draw::H.new('Text comes here...')
+The element instance has a simple interface with 3 methods;
+
+- `<<` method allows you to insert child element
+- `[]=` method allows you to set attribute for element
+- `[]` method allows you to get the value of the attribute for the element
+
+Example of adding child into an element;
+
+    text_box = OdfCore::Element::Draw::TextBox.new
+    headline = OdfCore::Element::Draw::H.new
     text_box << headline
 
-It's also possible to set attributes for elements like so;
+Example of setting and getting the attribute of an element;
 
-    text_box = OdfCore::Draw::TextBox.new
-    text_box.fo_max_height = '10px'
+    text_box = OdfCore::Element::Draw::TextBox.new
+    text_box['fo:max-height'] = '10px'
+    text_box['fo:max-height']
 
 ## Development
 
